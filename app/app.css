@@ -23,3 +23,32 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+.templates-wrapper .template {
+	margin-bottom: 50px;
+}
+
+.templates-wrapper .template h1 {
+	text-align: center;
+	display: block;
+	text-transform: uppercase;
+}
+
+.templates-wrapper .template img {
+	width: 80%;
+	display: table;
+	margin: auto;
+}
+
+.templates-wrapper .template .price {
+	display: table;
+	margin: auto;	
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.templates-wrapper .template .btn {
+	width: 50%;
+	display: table;
+	margin: auto;
+}
