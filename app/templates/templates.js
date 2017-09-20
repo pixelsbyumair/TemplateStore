@@ -14,12 +14,23 @@ angular.module('templateStore.templates', ['ngRoute'])
 }])
 
 
-.controller('TemplatesCtrl', ['$scope', function($scope){
+.controller('TemplatesCtrl', ['$scope', '$http', function($scope, $http){
 
-		console.log($scope);
+		$http.get('http://localhost:3000/templates').then(function(response){
+			$scope.templates = response.data;
+		});
 }])
 
-.controller('TemplateDetailsCtrl', ['$scope', function($scope){
+.controller('TemplateDetailsCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
 
-		console.log($scope);
+		var id = $routeParams.id;
+		var requestUrl = 'http://localhost:3000/templates/'+id;
+
+		$http.get(requestUrl).then(function(response){
+			$scope.template = response.data;
+		
+			console.log($scope.template);
+		});
+
+		
 }]);
