@@ -32,5 +32,7 @@ angular.module('templateStore.templates', ['ngRoute'])
 			console.log($scope.template);
 		});
 
+
+
 		
 }]);
