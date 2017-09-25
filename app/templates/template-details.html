@@ -27,15 +27,16 @@
 			<!-- <button class="btn btn-primary btn-lg">Buy Now</button> -->
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
+
 			  <!-- Identify your business so that you can collect the payments. -->
-			  <input type="hidden" name="business" value="herschelgomez@xyzzyu.com">
+			  <input type="hidden" name="business" value="yourpaypalaccount@xyzzyu.com">
 
 			  <!-- Specify a Buy Now button. -->
 			  <input type="hidden" name="cmd" value="_xclick">
 
 			  <!-- Specify details about the item that buyers will purchase. -->
-			  <input type="hidden" name="item_name" value="Hot Sauce-12oz. Bottle">
-			  <input type="hidden" name="amount" value="5.95">
+			  <input type="hidden" name="item_name" value="{{template.name}}">
+			  <input type="hidden" name="amount" value="{{template.price}}">
 			  <input type="hidden" name="currency_code" value="USD">
 
 			  <!-- Display the payment button. -->
